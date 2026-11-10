@@ -1,0 +1,1 @@
+# Independent repository for developing and publishing reusable Go libraries.
