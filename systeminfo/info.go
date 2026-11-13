@@ -29,3 +29,8 @@ func GetCPUCount() int {
 func GetGoVersion() string {
 	return runtime.Version()
 }
+
+// GetSystemSummary returns the operating system and architecture.
+func GetSystemSummary() string {
+	return runtime.GOOS + "/" + runtime.GOARCH
+}

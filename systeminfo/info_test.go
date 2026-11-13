@@ -51,3 +51,12 @@ func TestGetGoVersion(t *testing.T) {
 		t.Errorf("GetGoVersion() = %v, want %v", got, want)
 	}
 }
+
+func TestGetSystemSummary(t *testing.T) {
+	got := GetSystemSummary()
+	want := runtime.GOOS + "/" + runtime.GOARCH
+
+	if got != want {
+		t.Errorf("GetSystemSummary() = %v, want %v", got, want)
+	}
+}
