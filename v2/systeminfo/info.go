@@ -1,0 +1,36 @@
+package systeminfo
+
+import (
+	"os"
+	"runtime"
+)
+
+// GetOS returns the operating system.
+func GetOS() string {
+	return runtime.GOOS
+}
+
+// GetArchitecture returns the system architecture.
+func GetArchitecture() string {
+	return runtime.GOARCH
+}
+
+// Hostname returns the machine hostname.
+func Hostname() (string, error) {
+    return os.Hostname()
+}
+
+// GetCPUCount returns the number of logical CPUs.
+func GetCPUCount() int {
+	return runtime.NumCPU()
+}
+
+// GetGoVersion returns the Go runtime version.
+func GetGoVersion() string {
+	return runtime.Version()
+}
+
+// GetSystemSummary returns the operating system and architecture.
+func GetSystemSummary() string {
+	return runtime.GOOS + "/" + runtime.GOARCH
+}
